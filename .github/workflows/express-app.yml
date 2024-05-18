@@ -16,7 +16,10 @@ jobs:
     steps:
     
     - uses: actions/checkout@v4
-
+    
+    - name: Print environment variables
+      run: env
+      
     - name: Check if secrets are available
       run: |
         if [ -z "${{ secrets.DOCKERHUB_USERNAME }}" ]; then
