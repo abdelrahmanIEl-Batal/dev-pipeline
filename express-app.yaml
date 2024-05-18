@@ -28,3 +28,6 @@ jobs:
       with:
         push: true
         tags: user/app:latest
+
+     - name: Trigger Render deployment
+       run: curl -X GET ${{ secrets.RENDER_HOOK }}
